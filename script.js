@@ -1,10 +1,9 @@
-// Skills Section (using JavaScript Loops and Conditional Statements)
 const skills = [
     { name: 'HTML', level: 'Expert' },
     { name: 'CSS', level: 'Intermediate' },
     { name: 'JavaScript', level: 'Advanced' },
-    { name: 'React', level: 'Intermediate' },
-    { name: 'Node.js', level: 'Advanced' }
+    // { name: 'React', level: 'Intermediate' },
+    // { name: 'Node.js', level: 'Advanced' }
 ];
 
 const skillsContainer = document.getElementById('skills-list');
@@ -19,7 +18,6 @@ skills.forEach(skill => {
     skillsContainer.appendChild(skillDiv);
 });
 
-// Experience Section (using JavaScript Functions and Arrow Functions)
 const experiences = [
     { company: 'ABC Corp', role: 'Web Developer', years: 2 },
     { company: 'XYZ Ltd', role: 'Frontend Developer', years: 3 }
@@ -38,11 +36,10 @@ const displayExperiences = () => {
 
 displayExperiences();
 
-// Education Section (using Callback Functions and async/await)
 const fetchEducationData = async (callback) => {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await response.json();
-    callback(data.slice(0, 3));  // Limiting to 3 items
+    callback(data.slice(0, 3)); 
 };
 
 const displayEducation = (data) => {
@@ -57,7 +54,6 @@ const displayEducation = (data) => {
 
 fetchEducationData(displayEducation);
 
-// Contact Form (Fetch API and setTimeout)
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', (e) => {
@@ -75,6 +71,6 @@ contactForm.addEventListener('submit', (e) => {
     .then(() => {
         setTimeout(() => {
             alert('Message sent successfully!');
-        }, 2000); // Simulating a delay
+        }, 2000);
     });
 });
